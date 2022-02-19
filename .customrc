@@ -1,0 +1,20 @@
+#!/bin/bash
+export PGDATABASE=postgres
+
+alias reload='. ~/.bashrc'
+
+# Normally i put servers here, but I won't commit them :)
+
+# I like having a quick_start with things i often forget to remember...
+alias quick_start='sudo service postgresql start; sudo service redis-server start'
+# i like my main python being python3...
+alias python='python3'
+
+code_bundle_show() {
+     code $(bundle show $1)
+}
+
+export RVM_CURRENT="\$(get_ruby_gemset)"
+
+# Fetch a random ascii art from ~/neofetch_ascii
+neofetch --ascii $(find ~/neofetch_ascii/ -type f | shuf -n 1)
